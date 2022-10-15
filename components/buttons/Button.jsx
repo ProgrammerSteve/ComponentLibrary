@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
   DangerButton, 
   BaseButton,
@@ -17,12 +19,28 @@ export const getButton=(buttonType= BUTTON_TYPES_CLASSES.base)=>{
   }[buttonType]
 )}
 
-const Button=({key,buttonType=BUTTON_TYPES_CLASSES.base,text="" })=>{
+const Button=({key,buttonType=BUTTON_TYPES_CLASSES.base,label="", onClick=undefined })=>{
   const CustomButton=getButton(buttonType);
   return(
-    <CustomButton key={key}>
-      <span>{text}</span>
+    <CustomButton key={key} onClick={onClick}>
+      <span>{label}</span>
     </CustomButton>
   )
 }
 export default Button
+
+Button.propTypes = {
+  key: PropTypes.string,
+  buttonType: PropTypes.string,
+  // backgroundColor: PropTypes.string,
+  // size: PropTypes.oneOf(['small', 'medium', 'large']),
+  label: PropTypes.string,
+  onClick: PropTypes.func,
+};
+
+Button.defaultProps = {
+  key: 'button-1',
+  buttonType: BUTTON_TYPES_CLASSES.base,
+  label: 'click me',
+  onClick: undefined,
+};
