@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 
-export const BaseInput=styled.div`
+export const InputVar1=styled.div`
   background-color: #ffffff;
   display:flex;
   flex-direction: column;
@@ -18,9 +18,8 @@ export const BaseInput=styled.div`
   margin: 5px 0px;
 
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight:lighter;
+  font-weight:bold;
   background-color: none;
-  
 }
 & input{
   height: 20px;
@@ -28,10 +27,9 @@ export const BaseInput=styled.div`
     padding:1.5px 4px;
   margin-bottom: 3px;
   border: 1px black solid;
-  box-shadow: 3px 3px 2px #38496db6;
 
   background-color:none;
-  border-radius: 0px;
+  border-radius: 100vmax;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color:#444040;
 }

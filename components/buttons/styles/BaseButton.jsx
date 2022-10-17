@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+const mainColor='steelblue';
 
 export const BaseButton=styled.div`
 width:10rem;
@@ -6,7 +7,7 @@ height:4rem;
 border-radius:100vmax;
 display:grid;
 place-items:center;
-background-color:steelblue;
+background-color:${mainColor};
 user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -17,9 +18,9 @@ cursor:pointer;
   color:white;
 }
 &:hover{
-  background-color:blue;
+  background-color:#51495e;
   & span{
-    color:gray;
+    color:#c1bdbd;
   }
 }
 `
