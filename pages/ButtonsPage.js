@@ -2,11 +2,10 @@ import { useEffect, useRef, useState } from "react"
 import Button, { BUTTON_TYPES_CLASSES }  from "../components/buttons/Button.jsx"
 import Input, { INPUT_TYPES_CLASSES } from "../components/inputs/Input.jsx"
 import Progressbar, {PROGRESSBAR_TYPES_CLASSES} from "../components/progressbars/Progressbar.jsx"
+import Spinner, {SPINNER_TYPE_CLASSES} from "../components/spinners/Spinner.jsx";
 
 export default function ButtonsPage(){
   const [time,setTime]=useState(0);
-
-
 
   const intervalRef= useRef(null);
   const incrementTime=()=>setTime(prev=>(prev+1)%100);
@@ -16,10 +15,9 @@ export default function ButtonsPage(){
     return()=>clearInterval(intervalRef.current)
   },[])
 
-
   const gridStyle={
     display:"grid",
-    gridTemplateColumns: "1fr 1fr 1fr",
+    gridTemplateColumns: "1fr 1fr 1fr 1fr",
     gap:'20px',
     placeItems:"center",
     marginTop:"2rem",
@@ -44,12 +42,6 @@ export default function ButtonsPage(){
       }
     </div>
 
-
-
-
-
-
-
     <h2 style={headerStyle}>INPUTS</h2>
     <div style={gridStyle}>
       {
@@ -63,14 +55,7 @@ export default function ButtonsPage(){
       }
     </div>
 
-
-
-
-
-
-
-
-    <h2 style={headerStyle}>PROGRESSBARS time:{time}</h2>
+    <h2 style={headerStyle}>PROGRESSBARS {time}%</h2>
     <div style={gridStyle}>
       {
         Object.keys(PROGRESSBAR_TYPES_CLASSES).map(
@@ -81,6 +66,14 @@ export default function ButtonsPage(){
           />)
       }
     </div>
+
+    <h2 style={headerStyle}>Spinner</h2>
+    <div style={gridStyle}>
+      <Spinner spinnerType={SPINNER_TYPE_CLASSES.var1}/>
+      <Spinner spinnerType={SPINNER_TYPE_CLASSES.var2}/>
+      <Spinner spinnerType={SPINNER_TYPE_CLASSES.var3}/>
+    </div>
+    
     </>
   )
 }

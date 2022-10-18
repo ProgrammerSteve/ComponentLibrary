@@ -2,18 +2,21 @@ import PropTypes from 'prop-types';
 
 import {
   DangerButton, 
+  SecondaryButton,
   BaseButton,
   InvertedButton
 } from './styles'
 
 export const BUTTON_TYPES_CLASSES={
   base: 'base',
+  secondary: 'secondary',
   danger: 'danger',
   inverted: 'inverted',
 }
 export const getButton=(buttonType= BUTTON_TYPES_CLASSES.base)=>{
   return({
       [BUTTON_TYPES_CLASSES.base]: BaseButton,
+      [BUTTON_TYPES_CLASSES.secondary]: SecondaryButton,
       [BUTTON_TYPES_CLASSES.danger]: DangerButton,
       [BUTTON_TYPES_CLASSES.inverted]: InvertedButton,
   }[buttonType]
