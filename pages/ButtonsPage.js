@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import Button, { BUTTON_TYPES_CLASSES }  from "../components/buttons/Button.jsx"
 import Input, { INPUT_TYPES_CLASSES } from "../components/inputs/Input.jsx"
 import Progressbar, {PROGRESSBAR_TYPES_CLASSES} from "../components/progressbars/Progressbar.jsx"
+import Searchbar, {SEARCHBAR_TYPE_CLASSES} from "../components/searchbars/Searchbar.jsx";
 import Spinner, {SPINNER_TYPE_CLASSES} from "../components/spinners/Spinner.jsx";
 
 export default function ButtonsPage(){
@@ -72,6 +73,11 @@ export default function ButtonsPage(){
       <Spinner spinnerType={SPINNER_TYPE_CLASSES.var1}/>
       <Spinner spinnerType={SPINNER_TYPE_CLASSES.var2}/>
       <Spinner spinnerType={SPINNER_TYPE_CLASSES.var3}/>
+    </div>
+
+    <h2 style={headerStyle}>Searchbar</h2>
+    <div style={gridStyle}>
+      <Searchbar type={SEARCHBAR_TYPE_CLASSES.var1}/>
     </div>
     
     </>
