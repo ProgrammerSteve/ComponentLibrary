@@ -4,6 +4,7 @@ import Input, { INPUT_TYPES_CLASSES } from "../components/inputs/Input.jsx"
 import Progressbar, {PROGRESSBAR_TYPES_CLASSES} from "../components/progressbars/Progressbar.jsx"
 import Searchbar, {SEARCHBAR_TYPE_CLASSES} from "../components/searchbars/Searchbar.jsx";
 import Spinner, {SPINNER_TYPE_CLASSES} from "../components/spinners/Spinner.jsx";
+import Sidedrawer, {DRAWER_CLASSES_TYPES} from "../components/drawers/Sidedrawer.jsx";
 
 export default function ButtonsPage(){
   const [time,setTime]=useState(0);
@@ -78,6 +79,18 @@ export default function ButtonsPage(){
     <h2 style={headerStyle}>Searchbar</h2>
     <div style={gridStyle}>
       <Searchbar type={SEARCHBAR_TYPE_CLASSES.var1}/>
+    </div>
+
+
+    
+    <h2 style={headerStyle}>SideDrawer</h2>
+    <div style={gridStyle}>
+      <Sidedrawer type={DRAWER_CLASSES_TYPES.var1}>
+        <p>Home</p>
+        <div>
+          Hello World
+        </div>
+      </Sidedrawer>
     </div>
     
     </>
