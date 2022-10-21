@@ -5,6 +5,7 @@ import Progressbar, {PROGRESSBAR_TYPES_CLASSES} from "../components/progressbars
 import Searchbar, {SEARCHBAR_TYPE_CLASSES} from "../components/searchbars/Searchbar.jsx";
 import Spinner, {SPINNER_TYPE_CLASSES} from "../components/spinners/Spinner.jsx";
 import Sidedrawer, {DRAWER_CLASSES_TYPES} from "../components/drawers/Sidedrawer.jsx";
+import Toggle,{TOGGLE_CLASSES_TYPES} from "../components/toggles/Toggle.jsx";
 
 export default function ButtonsPage(){
   const [time,setTime]=useState(0);
@@ -83,15 +84,27 @@ export default function ButtonsPage(){
 
 
     
-    <h2 style={headerStyle}>SideDrawer</h2>
+    <h2 style={headerStyle}>Toggle</h2>
     <div style={gridStyle}>
-      <Sidedrawer type={DRAWER_CLASSES_TYPES.var1}>
+      <Toggle type={TOGGLE_CLASSES_TYPES.var1}/>
+    </div>
+
+
+
+
+
+
+
+    <Sidedrawer type={DRAWER_CLASSES_TYPES.var1}>
         <p>Home</p>
         <div>
           Hello World
         </div>
-      </Sidedrawer>
-    </div>
+    </Sidedrawer>
+
+
+
+
     
     </>
   )
