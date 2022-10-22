@@ -6,6 +6,7 @@ import Searchbar, {SEARCHBAR_TYPE_CLASSES} from "../components/searchbars/Search
 import Spinner, {SPINNER_TYPE_CLASSES} from "../components/spinners/Spinner.jsx";
 import Sidedrawer, {DRAWER_CLASSES_TYPES} from "../components/drawers/Sidedrawer.jsx";
 import Toggle,{TOGGLE_CLASSES_TYPES} from "../components/toggles/Toggle.jsx";
+import HamburgerMenu, {MENU_CLASSES_TYPES} from "../components/menus/HamburgerMenu.jsx";
 
 export default function ButtonsPage(){
   const [time,setTime]=useState(0);
@@ -90,8 +91,11 @@ export default function ButtonsPage(){
     </div>
 
 
-
-
+    <h2 style={headerStyle}>Menu</h2>
+    <div style={gridStyle}>
+    <HamburgerMenu type={MENU_CLASSES_TYPES.var1}>
+    </HamburgerMenu>
+    </div>
 
 
 
@@ -101,6 +105,7 @@ export default function ButtonsPage(){
           Hello World
         </div>
     </Sidedrawer>
+
 
 
 
