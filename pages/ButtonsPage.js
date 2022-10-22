@@ -7,6 +7,7 @@ import Spinner, {SPINNER_TYPE_CLASSES} from "../components/spinners/Spinner.jsx"
 import Sidedrawer, {DRAWER_CLASSES_TYPES} from "../components/drawers/Sidedrawer.jsx";
 import Toggle,{TOGGLE_CLASSES_TYPES} from "../components/toggles/Toggle.jsx";
 import HamburgerMenu, {MENU_CLASSES_TYPES} from "../components/menus/HamburgerMenu.jsx";
+import Tab, {TABS_CLASSES_TYPES} from "../components/tabs/Tab.jsx";
 
 export default function ButtonsPage(){
   const [time,setTime]=useState(0);
@@ -95,6 +96,13 @@ export default function ButtonsPage(){
     <div style={gridStyle}>
     <HamburgerMenu type={MENU_CLASSES_TYPES.var1}>
     </HamburgerMenu>
+    </div>
+
+
+    <h2 style={headerStyle}>Tab</h2>
+    <div style={gridStyle}>
+    <Tab type={TABS_CLASSES_TYPES.var1}>
+    </Tab>
     </div>
 
 

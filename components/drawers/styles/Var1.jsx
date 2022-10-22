@@ -17,7 +17,7 @@ export const Var1=styled.div`
   position: fixed;
   top:0px;
   transition: left 0.5s ease-in-out ;
-  ${props => props.open ? css`left:-300px;` : css`left:0px`};
+  ${props => props.open ?css`left:0px`: css`left:-300px;`};
   width:300px;
   height:100vh;
   background-color:steelblue;
@@ -37,7 +37,7 @@ export const Var1=styled.div`
   & .tab svg{
     width:${ props=> `${props.tabWidth}px` };
     height:${ props=> `${props.tabHeight}px` };
-    ${props => props.open ? css`transform:rotate(0deg)` : css`transform:translateX(-15px) rotate(180deg)`};
+    ${props => props.open ?css`transform:translateX(-15px) rotate(180deg)`: css`transform:rotate(0deg)` };
     transition: transform 0.35s ease-in-out ;
   }
   & .container{
